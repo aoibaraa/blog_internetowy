@@ -18,17 +18,17 @@ To jest aplikacja Django umożliwiająca tworzenie i zarządzanie blogiem intern
 
 ### Dla zarejestrowanych użytkowników
 
-5. **Tworzenie komentarzy**: Zarejestrowani użytkownicy mogą tworzyć komentarze do postów.
+6. **Tworzenie komentarzy**: Zarejestrowani użytkownicy mogą tworzyć komentarze do postów.
 
 ### Dla redaktorów
 
-6. **Tworzenie postów**: Redaktorzy mogą tworzyć nowe posty.
+7. **Tworzenie postów**: Redaktorzy mogą tworzyć nowe posty.
 
-7. **Edycja postów**: Redaktorzy mogą edytować swoje posty.
+8. **Edycja postów**: Redaktorzy mogą edytować swoje posty.
 
-8. **Usuwanie postów**: Redaktorzy mogą usuwać swoje posty.
+9. **Usuwanie postów**: Redaktorzy mogą usuwać swoje posty.
 
-9. **Widok listy moich postów**: Redaktorzy mogą przeglądać listę swoich postów.
+10. **Widok listy moich postów**: Redaktorzy mogą przeglądać listę swoich postów.
 
 ### Dla administratora
 
