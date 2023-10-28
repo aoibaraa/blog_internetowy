@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+  <h1>Panel Administratora</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Profile Picture</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.userprofile.role }}</td>
+          <td><img src="{{ user.userprofile.profile_picture.url }}" alt="{{ user.username }}" width="50"></td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">Brak użytkowników do wyświetlenia.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

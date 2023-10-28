@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+  <h1>Moje Posty</h1>
+  <ul>
+    {% for post in posts %}
+      <li>
+        <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+        <a href="{% url 'edit_post' post.pk %}">Edytuj</a>
+        <a href="{% url 'delete_post' post.pk %}">Usuń</a>
+      </li>
+    {% empty %}
+      <p>Brak postów do wyświetlenia.</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
