@@ -32,10 +32,14 @@ def register(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            profile = Profile.objects.get_or_create(user=user)[0]
-            profile.role = 'czytelnik'
-            profile.save()
+            print(request.POST.get('password'))
+            user = form.save(commit=False)
+            user.set_password(request.POST.get('password'))
+            user.save()
+            profile, created = Profile.objects.get_or_create(user=user)
+            if created:
+                profile.role = 'czytelnik'
+                profile.save()
             login(request, user)
             return redirect('home')
     else:
