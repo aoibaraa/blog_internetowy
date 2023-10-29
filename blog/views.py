@@ -15,7 +15,7 @@ def home(request):
 
 
 def post_detail(request, pk):
-    post = Post.objects.get(pk=pk)
+    post = get_object_or_404(Post, pk=pk)
     comments = Comment.objects.filter(post=post)
     form = CommentForm()
     return render(request, 'blog/post_detail.html', {'post': post, 'comments': comments, 'form': form})
@@ -65,7 +65,7 @@ def user_logout(request):
 # Dodaj komentarz
 @login_required
 def add_comment(request, pk):
-    post = Post.objects.get(pk=pk)
+    post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():

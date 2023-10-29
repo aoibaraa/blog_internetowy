@@ -7,7 +7,7 @@
       <li>
         <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
         <a href="{% url 'edit_post' post.pk %}">Edytuj</a>
-        <a href="{% url 'delete_post' post.pk %}">Usuń</a>
+        <a href="{% url 'delete_post' post.pk %}" onclick="return confirm('Czy na pewno chcesz usunąć post?')">Usuń</a>
       </li>
     {% empty %}
       <p>Brak postów do wyświetlenia.</p>
