@@ -78,8 +78,8 @@ Aplikacja będzie dostępna pod adresem `http://localhost:8000/`.
 
 * Zaloguj się jako czytelnik, aby przeglądać i komentować posty.
 
-## Autorzy
-Klaudia Sławińska, Krzysztof Wierzchowiecki
+## Autor
+Klaudia Sławińska
 
 ## Licencja
 Program stworzony w celach edukacyjnych. 
